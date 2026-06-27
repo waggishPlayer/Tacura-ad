@@ -3,93 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tacura (TactOS) — Low-Cost Audio-Tactile Braille Assistive OS</title>
+    <title>Tacura (TactOS) — The Future of Haptic Computing</title>
     <meta name="description" content="Tacura (TactOS) is an affordable, multimodal literacy, note-taking, and AI web-browsing assistive technology for visually impaired learners powered by Raspberry Pi, Arduino, and Neural AI.">
-    <meta name="theme-color" content="#0b0f19">
+    <meta name="theme-color" content="#080a0f">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background Glow Blobs -->
-    <div class="glow-blob blob-1"></div>
-    <div class="glow-blob blob-2"></div>
-    <div class="glow-blob blob-3"></div>
+    <!-- Radial Dot Grid -->
+    <div class="dot-grid"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="braille-icon">⠞⠁⠉⠥⠗⠁</span>
-                <span class="logo-text">Tacura <span class="badge">v3.0</span></span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#simulator">Haptic Cell Demo</a></li>
-                <li><a href="#modes">Operating Modes</a></li>
-                <li><a href="#hardware">Hardware Spec</a></li>
-                <li><a href="#repo" class="btn-primary-sm">GitHub Repos</a></li>
-            </ul>
-        </div>
+    <nav>
+        <a href="#" class="nav-logo">Tacura<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#simulator">Simulator</a></li>
+            <li><a href="#modes">Modes</a></li>
+            <li><a href="#hardware">Tech Specs</a></li>
+        </ul>
+        <a href="https://github.com/waggishPlayer/TactOS" target="_blank" class="nav-cta">GitHub Core</a>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container hero-container">
+    <header id="hero">
+        <div class="hero-inner">
             <div class="hero-content">
-                <div class="pill-tag">✨ Low-Cost Assistive Technology for Literacy</div>
-                <h1 class="hero-title">Empowering Visually Impaired Learners with <span class="gradient-text">Audio-Tactile AI</span></h1>
+                <div class="hero-badge">Next-Gen Assistive OS</div>
+                <h1 class="hero-title">Empowering Visually Impaired Learners with <span class="cyan-text">Audio-Tactile AI</span></h1>
                 <p class="hero-subtitle">An affordable, multimodal Braille literacy tutor, digital notebook, and AI-powered voice web browser running on Raspberry Pi and Arduino.</p>
-                <div class="hero-cta">
-                    <a href="#simulator" class="btn-primary">
-                        <span>Try Haptic Simulator</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                    <a href="https://github.com/waggishPlayer/TactOS" target="_blank" class="btn-secondary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        <span>View OS Codebase</span>
-                    </a>
+                <div class="hero-cta-group">
+                    <a href="#simulator" class="btn-primary">Try Haptic Simulator</a>
+                    <a href="https://github.com/waggishPlayer/TactOS" target="_blank" class="btn-secondary">View TactOS Codebase</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-num">&lt; $50</span>
+                        <span class="stat-num mono">&lt; $50</span>
                         <span class="stat-label">Hardware Cost</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-num">5-in-1</span>
-                        <span class="stat-label">Operating Modes</span>
+                        <span class="stat-num mono">5 Modes</span>
+                        <span class="stat-label">Assistive OS</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-num">6 Servos</span>
-                        <span class="stat-label">Dynamic Haptic Cell</span>
+                        <span class="stat-num mono">6 Servos</span>
+                        <span class="stat-label">Dynamic Cell</span>
                     </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="glass-card hardware-card">
+                <div class="tech-card">
                     <div class="card-header">
-                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
-                        <span class="card-title">Tacura Hardware Core</span>
+                        <span class="card-title mono">TACTOS_HARDWARE_CORE</span>
                     </div>
                     <div class="card-body">
-                        <div class="hw-node pi-node">
+                        <div class="hw-box">
                             <span class="icon">🍓</span>
                             <div>
                                 <h4>Raspberry Pi Host</h4>
                                 <p>Neural TTS, ASR & Groq AI Agent</p>
                             </div>
                         </div>
-                        <div class="bus-line">
-                            <span class="pulse"></span>
-                            <span class="bus-text">USB Serial @ 9600 Baud</span>
+                        <div class="bus-divider">
+                            <span class="mono bus-text">USB Serial @ 9600 Baud</span>
                         </div>
-                        <div class="hw-node arduino-node">
+                        <div class="hw-box">
                             <span class="icon">⚡</span>
                             <div>
                                 <h4>Arduino Microcontroller</h4>
@@ -103,59 +88,56 @@
     </header>
 
     <!-- Section 1: Interactive Haptic Braille Cell Simulator -->
-    <section id="simulator" class="section simulator-section">
+    <section id="simulator" class="section">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Interactive Haptic Cell <span class="gradient-text">Simulator</span></h2>
+                <h2 class="section-title">Interactive Haptic Cell <span class="cyan-text">Simulator</span></h2>
                 <p class="section-subtitle">Click any alphabet key below or type on your keyboard to test how the 6 servo actuators raise and lower in real time.</p>
             </div>
 
             <div class="simulator-grid">
                 <!-- Braille Cell Visualizer -->
-                <div class="glass-card cell-card">
+                <div class="tech-card cell-card">
                     <div class="cell-display-header">
-                        <span class="active-letter-label">Displayed Letter: <strong id="current-char">A</strong></span>
-                        <span class="raw-bits" id="current-bits">100000</span>
+                        <span class="active-letter-label">Displayed Letter: <strong id="current-char" class="cyan-text">A</strong></span>
+                        <span class="mono raw-bits" id="current-bits">100000</span>
                     </div>
                     
                     <div class="braille-cell" id="braille-cell">
                         <!-- 6 Dots -->
                         <div class="dot-col left-col">
-                            <div class="braille-dot active" id="dot-1" data-dot="1"><span class="dot-num">1</span></div>
-                            <div class="braille-dot" id="dot-2" data-dot="2"><span class="dot-num">2</span></div>
-                            <div class="braille-dot" id="dot-3" data-dot="3"><span class="dot-num">3</span></div>
+                            <div class="braille-dot active" id="dot-1" data-dot="1"><span class="mono dot-num">1</span></div>
+                            <div class="braille-dot" id="dot-2" data-dot="2"><span class="mono dot-num">2</span></div>
+                            <div class="braille-dot" id="dot-3" data-dot="3"><span class="mono dot-num">3</span></div>
                         </div>
                         <div class="dot-col right-col">
-                            <div class="braille-dot" id="dot-4" data-dot="4"><span class="dot-num">4</span></div>
-                            <div class="braille-dot" id="dot-5" data-dot="5"><span class="dot-num">5</span></div>
-                            <div class="braille-dot" id="dot-6" data-dot="6"><span class="dot-num">6</span></div>
+                            <div class="braille-dot" id="dot-4" data-dot="4"><span class="mono dot-num">4</span></div>
+                            <div class="braille-dot" id="dot-5" data-dot="5"><span class="mono dot-num">5</span></div>
+                            <div class="braille-dot" id="dot-6" data-dot="6"><span class="mono dot-num">6</span></div>
                         </div>
                     </div>
 
                     <div class="servo-telemetry">
                         <div class="telemetry-row">
                             <span>Servo State:</span>
-                            <strong id="servo-status" class="status-active">HOLDING PATTERN</strong>
+                            <strong id="servo-status" class="mono status-active">HOLDING_PATTERN</strong>
                         </div>
                         <div class="telemetry-row">
                             <span>Audio Feedback:</span>
-                            <button id="btn-speak" class="btn-audio">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                                Speak Letter
-                            </button>
+                            <button id="btn-speak" class="btn-audio">Speak Letter</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Alphabet Selector Keyboard -->
-                <div class="glass-card keyboard-card">
+                <div class="tech-card keyboard-card">
                     <h3>Select Alphabet to Test</h3>
                     <div class="alphabet-grid" id="alphabet-buttons">
-                        <!-- JavaScript will render A-Z buttons -->
+                        <!-- JavaScript renders A-Z buttons -->
                     </div>
                     <div class="control-actions">
                         <button id="btn-clear" class="btn-outline">Clear Display</button>
-                        <button id="btn-test" class="btn-outline">Run Hardware Self-Test</button>
+                        <button id="btn-test" class="btn-outline">Run Self-Test</button>
                     </div>
                 </div>
             </div>
@@ -163,90 +145,90 @@
     </section>
 
     <!-- Section 2: Operating Modes -->
-    <section id="modes" class="section modes-section">
+    <section id="modes" class="section bg2">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">5 Modular <span class="gradient-text">Operating Modes</span></h2>
+                <h2 class="section-title">5 Modular <span class="cyan-text">Operating Modes</span></h2>
                 <p class="section-subtitle">Cycled seamlessly using the dedicated Mode key on the 10-key GPIO chord keyboard.</p>
             </div>
 
             <div class="modes-grid">
-                <div class="mode-card glass-card">
+                <div class="mode-card tech-card">
                     <div class="mode-icon">📖</div>
                     <h3>1. LEARN Mode</h3>
                     <p>Guided Braille literacy. Displays alphabet letters sequentially on the haptic cell with synchronised high-definition neural speech synthesis.</p>
-                    <span class="mode-tag">Literacy Engine</span>
+                    <span class="mono mode-tag">LITERACY_ENGINE</span>
                 </div>
 
-                <div class="mode-card glass-card">
+                <div class="mode-card tech-card">
                     <div class="mode-icon">🎮</div>
                     <h3>2. QUIZ Mode</h3>
                     <p>Gamified chord typing drills. Test tactile recognition and speed with interactive levels, streaks, scoreboards, and AI tutor audio encouragement.</p>
-                    <span class="mode-tag">Gamified Practice</span>
+                    <span class="mono mode-tag">GAMIFIED_PRACTICE</span>
                 </div>
 
-                <div class="mode-card glass-card">
+                <div class="mode-card tech-card">
                     <div class="mode-icon">📝</div>
                     <h3>3. NOTES Mode</h3>
                     <p>Tactile digital notebook. Compose thoughts and notes directly using the 6-dot chord keyboard. Automatically saved to persistent storage.</p>
-                    <span class="mode-tag">Accessible Notebook</span>
+                    <span class="mono mode-tag">DIGITAL_NOTEBOOK</span>
                 </div>
 
-                <div class="mode-card glass-card">
+                <div class="mode-card tech-card">
                     <div class="mode-icon">🌐</div>
                     <h3>4. WEB Mode</h3>
                     <p>Voice-guided AI web assistant. Type queries in Braille; Tacura uses Groq (Llama 3.1) & Wikipedia to format concise 3–5 sentence audio summaries.</p>
-                    <span class="mode-tag">Generative AI</span>
+                    <span class="mono mode-tag">GENERATIVE_AI</span>
                 </div>
 
-                <div class="mode-card glass-card">
+                <div class="mode-card tech-card">
                     <div class="mode-icon">🔊</div>
                     <h3>5. READ Mode</h3>
                     <p>Review saved notes letter-by-letter on the dynamic haptic display or listen to automated audio readbacks at customizable speeds.</p>
-                    <span class="mode-tag">Playback Manager</span>
+                    <span class="mono mode-tag">PLAYBACK_MANAGER</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 3: Hardware & Pinout Specifications -->
-    <section id="hardware" class="section hardware-section">
+    <section id="hardware" class="section">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Hardware Architecture & <span class="gradient-text">Pinouts</span></h2>
+                <h2 class="section-title">Hardware Architecture & <span class="cyan-text">Pinouts</span></h2>
                 <p class="section-subtitle">Engineered for low cost, maximum reliability, and easy assembly.</p>
             </div>
 
             <div class="hardware-tables-grid">
-                <div class="glass-card table-card">
-                    <h3>Raspberry Pi 10-Key GPIO Keyboard</h3>
+                <div class="tech-card table-card">
+                    <h3 class="cyan-text">Raspberry Pi 10-Key GPIO Keyboard</h3>
                     <div class="table-responsive">
                         <table>
                             <thead>
                                 <tr><th>Key</th><th>Function</th><th>GPIO Pin</th><th>Logic</th></tr>
                             </thead>
                             <tbody>
-                                <tr><td><strong>Dot 1..6</strong></td><td>Braille Chord Keys</td><td>GPIO 5, 6, 13, 19, 26, 21</td><td>Active-LOW</td></tr>
-                                <tr><td><strong>Space</strong></td><td>Spacebar / Audio Repeat</td><td>GPIO 20</td><td>Active-LOW</td></tr>
-                                <tr><td><strong>Enter</strong></td><td>Confirm / Advance</td><td>GPIO 16</td><td>Active-LOW</td></tr>
-                                <tr><td><strong>Back</strong></td><td>Delete / Previous</td><td>GPIO 12</td><td>Active-LOW</td></tr>
-                                <tr><td><strong>Mode</strong></td><td>Cycle Modes / Shortcuts</td><td>GPIO 25</td><td>Active-LOW</td></tr>
+                                <tr><td><strong>Dot 1..6</strong></td><td>Braille Chord Keys</td><td class="mono">GPIO 5,6,13,19,26,21</td><td>Active-LOW</td></tr>
+                                <tr><td><strong>Space</strong></td><td>Spacebar / Audio Repeat</td><td class="mono">GPIO 20</td><td>Active-LOW</td></tr>
+                                <tr><td><strong>Enter</strong></td><td>Confirm / Advance</td><td class="mono">GPIO 16</td><td>Active-LOW</td></tr>
+                                <tr><td><strong>Back</strong></td><td>Delete / Previous</td><td class="mono">GPIO 12</td><td>Active-LOW</td></tr>
+                                <tr><td><strong>Mode</strong></td><td>Cycle Modes / Shortcuts</td><td class="mono">GPIO 25</td><td>Active-LOW</td></tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <div class="glass-card table-card">
-                    <h3>Arduino 6-Dot Servo Haptic Display</h3>
+                <div class="tech-card table-card">
+                    <h3 class="cyan-text">Arduino 6-Dot Servo Haptic Display</h3>
                     <div class="table-responsive">
                         <table>
                             <thead>
                                 <tr><th>Braille Dot</th><th>Position</th><th>Arduino Pin</th><th>PWM Duty</th></tr>
                             </thead>
                             <tbody>
-                                <tr><td><strong>Dot 1, 2, 3</strong></td><td>Left Column (Top to Bot)</td><td>Pins 9, 10, 11</td><td>500us – 2500us</td></tr>
-                                <tr><td><strong>Dot 4, 5, 6</strong></td><td>Right Column (Top to Bot)</td><td>Pins 6, 5, 3</td><td>500us – 2500us</td></tr>
-                                <tr><td><strong>Protocol</strong></td><td>USB Serial @ 9600 Baud</td><td>UART RX/TX</td><td>ASCII Payload</td></tr>
+                                <tr><td><strong>Dot 1, 2, 3</strong></td><td>Left Column (Top to Bot)</td><td class="mono">Pins 9, 10, 11</td><td class="mono">500us – 2500us</td></tr>
+                                <tr><td><strong>Dot 4, 5, 6</strong></td><td>Right Column (Top to Bot)</td><td class="mono">Pins 6, 5, 3</td><td class="mono">500us – 2500us</td></tr>
+                                <tr><td><strong>Protocol</strong></td><td>USB Serial @ 9600 Baud</td><td class="mono">UART RX/TX</td><td>ASCII Payload</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -255,19 +237,16 @@
         </div>
     </section>
 
-    <!-- Footer / Repo CTA -->
-    <footer id="repo" class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container text-center">
-            <h2 class="footer-title">Ready to Explore the Code?</h2>
-            <p class="footer-subtitle">Tacura is completely open-source and built for social impact.</p>
+            <div class="footer-brand">Tacura<span>.</span></div>
+            <p class="footer-subtitle">Built with ♥ by Team Tact · Open-Source & Assistive Technology</p>
             <div class="footer-buttons">
-                <a href="https://github.com/waggishPlayer/TactOS" target="_blank" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span>TactOS Core Repository</span>
-                </a>
+                <a href="https://github.com/waggishPlayer/TactOS" target="_blank" class="nav-cta">Explore TactOS Core Repository</a>
             </div>
             <div class="footer-credits">
-                <p>&copy; 2026 Tacura (TactOS) Assistive Project. Licensed under MIT.</p>
+                <p>&copy; 2026 Tacura (TactOS) Project. Licensed under MIT.</p>
             </div>
         </div>
     </footer>
